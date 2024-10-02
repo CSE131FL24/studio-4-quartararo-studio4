@@ -19,6 +19,17 @@ public class InterpretDrawingFile {
 		chooser.showOpenDialog(null);
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
-		
+
+		String fileRead = in.nextLine();
+		String[] shapeArgs = fileRead.split(" ");
+
+		double x1 = Double.parseDouble(shapeArgs[5]);
+		double y1 = Double.parseDouble(shapeArgs[6]);
+		double x2 = Double.parseDouble(shapeArgs[7]);
+		double y2 = Double.parseDouble(shapeArgs[8]);
+		if (shapeArgs.length > 8) {
+			double x3 = Double.parseDouble(shapeArgs[9]);
+			double y3 = Double.parseDouble(shapeArgs[10]);
+		}
 	}
 }
